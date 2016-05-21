@@ -1,6 +1,9 @@
 package ua.george_nika.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.george_nika.model.HavePronoun;
+import ua.george_nika.model.OwnPronoun;
 import ua.george_nika.model.Pronoun;
 
 /**
@@ -10,10 +13,30 @@ import ua.george_nika.model.Pronoun;
 @Service
 public class PronounService {
 
+    @Autowired
+    Pronoun pronoun;
+
+    @Autowired
+    RandomService randomService;
+
+    @Autowired
+    OwnPronoun ownPronoun;
+
+    @Autowired
+    HavePronoun havePronoun;
+
     public String getSimplePronoun() {
 
-        Long randomPronoun = Math.round(Math.random() * Pronoun.simplePronoun.length);
+        return pronoun.getRandomEntity();
+    }
 
-        return Pronoun.simplePronoun[randomPronoun.intValue()];
+    public String getOwnPronoun() {
+
+        return ownPronoun.getRandomEntity();
+    }
+
+    public String getHavePronoun() {
+
+        return "У "+havePronoun.getRandomEntity()+" "+randomService.getRandomExistence();
     }
 }

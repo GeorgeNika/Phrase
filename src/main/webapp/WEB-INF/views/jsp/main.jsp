@@ -11,6 +11,24 @@
     <title>Main</title>
 </head>
 <body>
-<a href="simple">Simple phrase</a>
+<h1>${phrase}</h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a href="random">Случайная Фраза</a>
+<br/>
+<a href="simple">Простая фраза</a>
+<br/>
+<a href="infinitive">Фраза с инфинитивом</a>
+<br/>
+<a href="number">Фраза с числом</a>
+<br/>
+<a href="adjective">Фраза с прилагательным</a>
+<br/>
+<a href="own">Моё</a>
+<br/>
+<a href="have">У меня есть</a>
 </body>
 </html>
