@@ -30,5 +30,10 @@
 <a href="own">Моё</a>
 <br/>
 <a href="have">У меня есть</a>
+<br/>
+<a href="question">Вопросы</a>
+<br/>
+<a href="adverb">Наречия</a>
+
 </body>
 </html>

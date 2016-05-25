@@ -69,4 +69,16 @@ public class MainController {
         model.addAttribute("phrase", phraseService.getHavePhrase());
         return "main";
     }
+    @RequestMapping(value = "/question")
+    public String question(ModelMap model) {
+
+        model.addAttribute("phrase", phraseService.getQuestion());
+        return "main";
+    }
+    @RequestMapping(value = "/adverb")
+    public String adverb(ModelMap model) {
+
+        model.addAttribute("phrase", phraseService.getAdverbs());
+        return "main";
+    }
 }

@@ -74,26 +74,63 @@ public class Noun extends AbstractEntity{
         entityList.add("машина");
         entityList.add("улица");
         entityList.add("дедушка");
-        entityList.add("пожилой человек");
+        entityList.add("товарищь");
+        entityList.add("парень/девушка");
+        entityList.add("друг");
+        entityList.add("марка");
+        entityList.add("старожил");
         entityList.add("урок");
         entityList.add("газета");
         entityList.add("письмо");
 
+        entityList.add("комната");
+        entityList.add("квартира");
+        entityList.add("дом");
 
+        entityList.add("клерк");
+        entityList.add("деньги");
 
+        entityList.add("женщина");
+        entityList.add("мужчина");
+        entityList.add("брат");
+        entityList.add("сестра");
+        entityList.add("сын");
+        entityList.add("дочь");
+        entityList.add("сумка");
 
+        entityList.add("диалог");
+        entityList.add("контора офис");
 
-
-
-
-
-
-
-
-
-
-
+        entityList.add("госпожа");
+        entityList.add("господин");
+        entityList.add("страна");
+        entityList.add("внук");
+        entityList.add("очки");
+        entityList.add("мяч");
+        entityList.add("вопрос");
+        entityList.add("словарь");
+        entityList.add("младенец");
+        entityList.add("проблема");
+        entityList.add("директор");
+        entityList.add("солдат");
+        entityList.add("фильм");
+        entityList.add("комп.мышь");
+        entityList.add("кабель");
+        entityList.add("очки");
+        entityList.add("записная книжка");
+        entityList.add("бутылка");
+        entityList.add("зонт");
+        entityList.add("экскурсия");
+        entityList.add("домой к себе");
+        entityList.add("электричество");
+        entityList.add("поезд");
+        entityList.add("автобус");
+        entityList.add("вечеринка");
+        entityList.add("маршрут");
+        entityList.add("фабрика");
+        entityList.add("профессия");
 
     }
 
 }
+

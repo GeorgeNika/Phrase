@@ -3,6 +3,7 @@ package ua.george_nika.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.george_nika.model.ActiveVerb;
+import ua.george_nika.model.Adverbs;
 import ua.george_nika.model.SimpleVerb;
 
 /**
@@ -18,6 +19,9 @@ public class VerbService {
     @Autowired
     ActiveVerb activeVerb;
 
+    @Autowired
+    Adverbs adverbs;
+
 
 
     @Autowired
@@ -31,5 +35,10 @@ public class VerbService {
     public String getActiveVerb() {
 
         return activeVerb.getRandomEntity();
+    }
+
+    public String getAdverbs() {
+
+        return adverbs.getRandomEntity();
     }
 }

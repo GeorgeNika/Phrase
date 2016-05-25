@@ -23,6 +23,9 @@ public class PhraseService {
     AdjectiveService adjectiveService;
 
     @Autowired
+    QuestionService questionService;
+
+    @Autowired
     RandomService randomService;
 
     public String getSimplePhrase(){
@@ -94,14 +97,32 @@ public class PhraseService {
         return result.toString();
     }
 
+    public String getAdverbs(){
+        StringBuilder result = new StringBuilder();
+
+
+        result.append(verbService.getAdverbs());
+        return result.toString();
+    }
+
+    public String getQuestion(){
+        StringBuilder result = new StringBuilder();
+
+
+        result.append(questionService.getQuestion());
+        return result.toString();
+    }
+
     public String getRandomPhrase(){
-        switch (randomService.getRandomInt(5)+1){
+        switch (randomService.getRandomInt(7)+1){
             case 1: return getSimplePhrase();
             case 2: return getInfinitivePhrase();
             case 3: return getNumberPhrase();
             case 4: return getAdjectivePhrase();
             case 5: return getOwnPhrase();
             case 6: return getHavePhrase();
+            case 7: return getQuestion();
+            case 8: return getAdverbs();
 
             default: return getSimplePhrase();
         }

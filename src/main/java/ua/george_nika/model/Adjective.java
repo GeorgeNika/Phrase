@@ -18,6 +18,14 @@ public class Adjective extends AbstractEntity {
         entityList.add("маленький");
         entityList.add("больной");
         entityList.add("красивый");
+        entityList.add("интересный");
+        entityList.add("симпатичный");
+        entityList.add("дорогой");
+        entityList.add("важный");
+        entityList.add("пожилой");
+        entityList.add("женатый");
+
+
 
     }
 

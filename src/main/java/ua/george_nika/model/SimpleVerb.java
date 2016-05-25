@@ -39,6 +39,8 @@ public class SimpleVerb extends AbstractEntity{
         entityList.add("водить");
         entityList.add("путешествовать");
         entityList.add("мочь");
+        entityList.add("сказать");
+
 
 
 
