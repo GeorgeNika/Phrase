@@ -11,19 +11,7 @@ public class PhraseService {
 
 
     @Autowired
-    PronounService pronounService;
-
-    @Autowired
-    NounService nounService;
-
-    @Autowired
-    VerbService verbService;
-
-    @Autowired
-    AdjectiveService adjectiveService;
-
-    @Autowired
-    QuestionService questionService;
+    ModelService modelService;
 
     @Autowired
     RandomService randomService;
@@ -31,11 +19,11 @@ public class PhraseService {
     public String getSimplePhrase(){
         StringBuilder result = new StringBuilder();
 
-        result.append(pronounService.getSimplePronoun());
+        result.append(modelService.getSimplePronoun());
         result.append("  ");
-        result.append(verbService.getSimpleVerb());
+        result.append(modelService.getSimpleVerb());
         result.append("  ");
-        result.append(randomService.getPositiveOrNegative(nounService.getSimpleNoun()));
+        result.append(randomService.getPositiveOrNegative(modelService.getSimpleNoun()));
         result.append("  ");
         return result.toString();
     }
@@ -43,13 +31,13 @@ public class PhraseService {
     public String getInfinitivePhrase(){
         StringBuilder result = new StringBuilder();
 
-        result.append(pronounService.getSimplePronoun());
+        result.append(modelService.getSimplePronoun());
         result.append("  ");
-        result.append(randomService.getPositiveOrNegative(verbService.getActiveVerb()));
+        result.append(randomService.getPositiveOrNegative(modelService.getActiveVerb()));
         result.append("  ");
-        result.append(verbService.getSimpleVerb());
+        result.append(modelService.getSimpleVerb());
         result.append("  ");
-        result.append(nounService.getSimpleNoun());
+        result.append(modelService.getSimpleNoun());
         result.append("  ");
         return result.toString();
     }
@@ -57,11 +45,19 @@ public class PhraseService {
     public String getNumberPhrase(){
         StringBuilder result = new StringBuilder();
 
-        result.append(pronounService.getSimplePronoun());
+        result.append(modelService.getSimplePronoun());
         result.append("  ");
-        result.append(verbService.getSimpleVerb());
+        result.append(modelService.getSimpleVerb());
         result.append("  ");
-        result.append(randomService.getRandomOrder(" " + randomService.getRandomInt(100), nounService.getSimpleNoun()));
+        int randomInt = randomService.getRandomInt(100);
+        if (randomInt==1){
+            result.append(modelService.getSimpleNoun());
+            result.append("  1");
+        }else{
+            result.append(randomInt);
+            result.append("  ");
+            result.append(modelService.getSimpleNoun());
+        }
         result.append("  ");
         return result.toString();
     }
@@ -69,11 +65,13 @@ public class PhraseService {
     public String getAdjectivePhrase(){
         StringBuilder result = new StringBuilder();
 
-        result.append(pronounService.getSimplePronoun());
+        result.append(modelService.getSimplePronoun());
         result.append("  ");
-        result.append(verbService.getSimpleVerb());
+        result.append(modelService.getSimpleVerb());
         result.append("  ");
-        result.append(randomService.getRandomOrder(adjectiveService.getSimpleAdjective(), nounService.getSimpleNoun()));
+        result.append(modelService.getSimpleNoun());
+        result.append("  ");
+        result.append(modelService.getSimpleAdjective());
         result.append("  ");
         return result.toString();
     }
@@ -81,9 +79,11 @@ public class PhraseService {
     public String getOwnPhrase(){
         StringBuilder result = new StringBuilder();
 
-        result.append(randomService.getRandomOrder(adjectiveService.getSimpleAdjective(), nounService.getSimpleNoun()));
+        result.append(modelService.getSimpleNoun());
         result.append("  ");
-        result.append(pronounService.getOwnPronoun());
+        result.append(modelService.getSimpleAdjective());
+        result.append("  ");
+        result.append(modelService.getOwnPronoun());
         return result.toString();
     }
 
@@ -91,9 +91,11 @@ public class PhraseService {
         StringBuilder result = new StringBuilder();
 
 
-        result.append(pronounService.getHavePronoun());
+        result.append(modelService.getHavePronoun());
         result.append("  ");
-        result.append(randomService.getRandomOrder(adjectiveService.getSimpleAdjective(), nounService.getSimpleNoun()));
+        result.append(modelService.getSimpleNoun());
+        result.append("  ");
+        result.append(modelService.getSimpleAdjective());
         return result.toString();
     }
 
@@ -101,7 +103,7 @@ public class PhraseService {
         StringBuilder result = new StringBuilder();
 
 
-        result.append(verbService.getAdverbs());
+        result.append(modelService.getAdverbs());
         return result.toString();
     }
 
@@ -109,7 +111,7 @@ public class PhraseService {
         StringBuilder result = new StringBuilder();
 
 
-        result.append(questionService.getQuestion());
+        result.append(modelService.getQuestion());
         return result.toString();
     }
 

@@ -10,16 +10,16 @@ public class Adverbs extends AbstractEntity {
 
     Adverbs(){
 
-        entityList.add("немного");
-        entityList.add("много");
-        entityList.add("тогда");
-        entityList.add("возможно");
-        entityList.add("возле");
-        entityList.add("хорошо");
-        entityList.add("ничего");
-        entityList.add("жаль");
-        entityList.add("очень");
-        entityList.add("можно");
+        addEntity("немного","","");
+        addEntity("много","","");
+        addEntity("тогда","","");
+        addEntity("возможно","","");
+        addEntity("возле","","");
+        addEntity("хорошо","","");
+        addEntity("ничего","","");
+        addEntity("жаль","","");
+        addEntity("очень","","");
+        addEntity("можно","","");
 
 
 

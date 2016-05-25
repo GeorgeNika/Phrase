@@ -10,18 +10,18 @@ public class Question extends AbstractEntity{
 
     Question(){
 
-        entityList.add("Потому-что.");
-        entityList.add("Чьё ?");
-        entityList.add("Я по поводу.");
-        entityList.add("Что номер телефона твой ?");
-        entityList.add("У кого есть ?");
-        entityList.add("Есть вопросы ?");
-        entityList.add("До свидания.");
+        addEntity("Потому-что.","","");
+        addEntity("Чьё ?","","");
+        addEntity("Я по поводу.","","");
+        addEntity("Что номер телефона твой ?","","");
+        addEntity("У кого есть ?","","");
+        addEntity("Есть вопросы ?","","");
+        addEntity("До свидания.","","");
 
-        entityList.add("Как твоё имя ?");
-        entityList.add("Сколько тебе лет ?");
-        entityList.add("Кому? ");
-        entityList.add("С кем ?");
+        addEntity("Как твоё имя ?","","");
+        addEntity("Сколько тебе лет ?","","");
+        addEntity("Кому? ","","");
+        addEntity("С кем ?","","");
 
     }
 

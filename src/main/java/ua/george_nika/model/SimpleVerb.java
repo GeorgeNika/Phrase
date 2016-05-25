@@ -12,35 +12,34 @@ public class SimpleVerb extends AbstractEntity{
 
     SimpleVerb(){
 
-        entityList.add("жить");
-        entityList.add("приезжать");
-        entityList.add("чувствовать");
-        entityList.add("учиться");
-        entityList.add("работать");
-        entityList.add("отдыхать");
-        entityList.add("делать");
-        entityList.add("хотеть");
-        entityList.add("нуждаться");
-        entityList.add("должен");
-        entityList.add("разговаривать");
-        entityList.add("писать");
-        entityList.add("ехать");
-        entityList.add("знать");
-        entityList.add("уметь");
-        entityList.add("спрашивать");
-        entityList.add("читать");
-        entityList.add("стоить");
-        entityList.add("подниматься");
-        entityList.add("покупать");
-        entityList.add("любить");
-        entityList.add("стоять");
-        entityList.add("собираться");
-        entityList.add("идти");
-        entityList.add("водить");
-        entityList.add("путешествовать");
-        entityList.add("мочь");
-        entityList.add("сказать");
-
+        addEntity("жить","","");
+        addEntity("приезжать","","");
+        addEntity("чувствовать","","");
+        addEntity("учиться","","");
+        addEntity("работать","","");
+        addEntity("отдыхать","","");
+        addEntity("делать","","");
+        addEntity("хотеть","","");
+        addEntity("нуждаться","","");
+        addEntity("должен","","");
+        addEntity("разговаривать","","");
+        addEntity("писать","","");
+        addEntity("ехать","","");
+        addEntity("знать","","");
+        addEntity("уметь","","");
+        addEntity("спрашивать","","");
+        addEntity("читать","","");
+        addEntity("стоить","","");
+        addEntity("подниматься","","");
+        addEntity("покупать","","");
+        addEntity("любить","","");
+        addEntity("стоять","","");
+        addEntity("собираться","","");
+        addEntity("идти","","");
+        addEntity("водить","","");
+        addEntity("путешествовать","","");
+        addEntity("мочь","","");
+        addEntity("сказать","","");
 
 
 

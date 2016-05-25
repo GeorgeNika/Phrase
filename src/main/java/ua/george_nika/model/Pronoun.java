@@ -12,16 +12,16 @@ public class Pronoun extends AbstractEntity{
 
     Pronoun (){
 
-        entityList.add("Я");
-        entityList.add("Ты (м)");
-        entityList.add("Ты (ж)");
-        entityList.add("Он");
-        entityList.add("Она");
-        entityList.add("Мы");
-        entityList.add("Вы (м)");
-        entityList.add("Вы (ж)");
-        entityList.add("Они (м)");
-        entityList.add("Они (ж)");
+        addEntity("Я","","");
+        addEntity("Ты (м)","","");
+        addEntity("Ты (ж)","","");
+        addEntity("Он","","");
+        addEntity("Она","","");
+        addEntity("Мы","","");
+        addEntity("Вы (м)","","");
+        addEntity("Вы (ж)","","");
+        addEntity("Они (м)","","");
+        addEntity("Они (ж)","","");
 
     }
 

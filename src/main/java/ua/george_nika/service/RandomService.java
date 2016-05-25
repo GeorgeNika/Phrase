@@ -1,6 +1,7 @@
 package ua.george_nika.service;
 
 import org.springframework.stereotype.Service;
+import ua.george_nika.model.ThreeString;
 
 /**
  * Created by george on 19.05.2016.
@@ -8,31 +9,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class RandomService {
 
-    public String getRandomOrder(String str1, String str2){
-
-        if (Math.random()>0.5){
-            return str1+" "+str2;
-        }
-        return str2+" "+str1;
-    }
-
     public int getRandomInt(int max){
+        if (Math.random()<0.2){
+            return 1;
+        }
+        if (Math.random()<0.4){
+            Long randomLong = Math.round(Math.random()*8+11);
+            return randomLong.intValue();
+        }
         Long randomLong = Math.round(Math.random()*max+1);
         return randomLong.intValue();
     }
 
-    public String getPositiveOrNegative(String str){
+    public ThreeString getPositiveOrNegative(ThreeString str){
         if (Math.random()>0.75){
-            return "не "+str;
+            str.setRussian("не "+str.getRussian());
+            str.setTranslate("***  "+str.getTranslate());
+            str.setTranscription("лё "+str.getTranscription());
+            return str;
         }
         return str;
     }
 
-    public String getRandomExistence(){
+    public ThreeString getRandomExistence(){
         if (Math.random()>0.6){
-            return "нет";
+            return new ThreeString("нет","***","***");
         }
-        return "есть";
+        return new ThreeString("есть","***","***");
     }
 
 

@@ -10,16 +10,16 @@ public class OwnPronoun extends AbstractEntity{
 
     OwnPronoun(){
 
-        entityList.add("Мой(моя)");
-        entityList.add("Твой(твоя) (м)");
-        entityList.add("Твой(твоя) (ж)");
-        entityList.add("Его");
-        entityList.add("Её");
-        entityList.add("Наше");
-        entityList.add("Ваше (м)");
-        entityList.add("Ваше (ж)");
-        entityList.add("Их (м)");
-        entityList.add("Их (ж)");
+        addEntity("Мой(моя)","","");
+        addEntity("Твой(твоя) (м)","","");
+        addEntity("Твой(твоя) (ж)","","");
+        addEntity("Его","","");
+        addEntity("Её","","");
+        addEntity("Наше","","");
+        addEntity("Ваше (м)","","");
+        addEntity("Ваше (ж)","","");
+        addEntity("Их (м)","","");
+        addEntity("Их (ж)","","");
 
     }
 

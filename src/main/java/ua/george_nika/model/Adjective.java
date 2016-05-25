@@ -10,22 +10,20 @@ import java.util.ArrayList;
 @Component
 public class Adjective extends AbstractEntity {
 
-    Adjective(){
+    Adjective() {
 
-        entityList.add("хороший");
-        entityList.add("новый");
-        entityList.add("большой");
-        entityList.add("маленький");
-        entityList.add("больной");
-        entityList.add("красивый");
-        entityList.add("интересный");
-        entityList.add("симпатичный");
-        entityList.add("дорогой");
-        entityList.add("важный");
-        entityList.add("пожилой");
-        entityList.add("женатый");
-
-
+        addEntity("хороший", "", "");
+        addEntity("новый", "", "");
+        addEntity("большой", "", "");
+        addEntity("маленький", "", "");
+        addEntity("больной", "", "");
+        addEntity("красивый", "", "");
+        addEntity("интересный", "", "");
+        addEntity("симпатичный", "", "");
+        addEntity("дорогой", "", "");
+        addEntity("важный", "", "");
+        addEntity("пожилой", "", "");
+        addEntity("женатый", "", "");
 
     }
 
