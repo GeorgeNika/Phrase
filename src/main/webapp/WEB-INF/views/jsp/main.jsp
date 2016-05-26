@@ -9,11 +9,16 @@
 <html>
 <head>
     <title>Main</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
-<h1>${phrase}</h1>
+<h1>${phraseRussian}</h1>
 <br/>
+<button onclick="$('#translate').show()">Перевод</button>
+<h1 id="translate" hidden>${phraseTranslate}</h1>
 <br/>
+<button onclick="$('#transcription').show()">Транскрипция</button>
+<h1 id="transcription" hidden>${phraseTranscription}</h1>
 <br/>
 <br/>
 <br/>
