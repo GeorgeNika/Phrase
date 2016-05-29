@@ -15,6 +15,9 @@ public class ModelService {
     SimpleVerb simpleVerb;
 
     @Autowired
+    InfinitiveVerb InfinitiveVerb;
+
+    @Autowired
     ActiveVerb activeVerb;
 
     @Autowired
@@ -50,6 +53,11 @@ public class ModelService {
     public ThreeString getSimpleVerb() {
 
         return simpleVerb.getRandomEntity();
+    }
+
+    public ThreeString getInfinitiveVerb() {
+
+        return InfinitiveVerb.getRandomEntity();
     }
 
     public ThreeString getActiveVerb() {

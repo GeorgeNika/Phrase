@@ -10,15 +10,12 @@ public class ActiveVerb extends AbstractEntity{
 
     ActiveVerb(){
 
-        addEntity("хотеть","","");   
-        addEntity("делать","","");
-        addEntity("должен","","");
-        addEntity("знать","","");
-        addEntity("спрашивать","","");
-        addEntity("покупать","","");
-        addEntity("читать","","");
-        addEntity("уметь","","");
-        addEntity("любить","","");
+        addEntity("хочу","רוצה","роце");
+        addEntity("должен","צריך","царих");
+        addEntity("умею","יודע","йодэа");
+        addEntity("люблю","אוהב","охев");
+        addEntity("еду","נוסע","носе");
+        addEntity("иду","הולך","холех");
     }
 
 

@@ -12,16 +12,16 @@ public class Pronoun extends AbstractEntity{
 
     Pronoun (){
 
-        addEntity("Я","","");
-        addEntity("Ты (м)","","");
-        addEntity("Ты (ж)","","");
-        addEntity("Он","","");
-        addEntity("Она","","");
-        addEntity("Мы","","");
-        addEntity("Вы (м)","","");
-        addEntity("Вы (ж)","","");
-        addEntity("Они (м)","","");
-        addEntity("Они (ж)","","");
+        addEntity("Я","אני","ани");
+        addEntity("Ты (м)","אתה","ата");
+        addEntity("Ты (ж)","את","ат");
+        addEntity("Он","הוא","ху");
+        addEntity("Она","היא","хи");
+        addEntity("Мы","אנחנו","анахну");
+        addEntity("Вы (м)","אתם","атем");
+        addEntity("Вы (ж)","אתן","атен");
+        addEntity("Они (м)","הם","хем");
+        addEntity("Они (ж)","הן","хен");
 
     }
 

@@ -12,18 +12,18 @@ public class Adjective extends AbstractEntity {
 
     Adjective() {
 
-        addEntity("хороший", "", "");
-        addEntity("новый", "", "");
-        addEntity("большой", "", "");
-        addEntity("маленький", "", "");
-        addEntity("больной", "", "");
-        addEntity("красивый", "", "");
-        addEntity("интересный", "", "");
-        addEntity("симпатичный", "", "");
-        addEntity("дорогой", "", "");
-        addEntity("важный", "", "");
-        addEntity("пожилой", "", "");
-        addEntity("женатый", "", "");
+        addEntity("хороший", "טוב", "тов");
+        addEntity("новый", "חדש", "хадаш");
+        addEntity("большой", "גדול", "гадоль");
+        addEntity("маленький", "קטן", "ктан");
+        addEntity("больной", "חולה", "холе");
+        addEntity("красивый", "יפה", "яфе");
+        addEntity("интересный", "מעניין", "меаньен");
+        addEntity("милый", "נחמד", "нехмад");
+        addEntity("дорогой","יקר", "якар");
+        addEntity("важный", "חשוב", "хашув");
+        addEntity("пожилой", "צקן", "закен");
+        addEntity("женатый", "נשוי", "насуй");
 
     }
 

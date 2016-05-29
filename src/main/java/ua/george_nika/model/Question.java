@@ -10,6 +10,15 @@ public class Question extends AbstractEntity{
 
     Question(){
 
+        addEntity("Кто?","מי","ми");
+        addEntity("Что?","מה","ма");
+        addEntity("Откуда?","מאין","мэайн");
+        addEntity("Кто ты?","מי אתה(את)","ми ата(ат)");
+        addEntity("Кто это?","מי זה","ми зэ");
+        addEntity("Что это?","מה זה","ма зэ");
+        addEntity("Где?","איפה","эйфо");
+
+
         addEntity("Потому-что.","***","***");
         addEntity("Чьё ?","***","***");
         addEntity("Я по поводу.","***","***");

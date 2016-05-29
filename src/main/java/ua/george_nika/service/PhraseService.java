@@ -40,7 +40,7 @@ public class PhraseService {
 
         appendToResult(modelService.getSimplePronoun());
         appendToResult(randomService.getPositiveOrNegative(modelService.getActiveVerb()));
-        appendToResult(modelService.getSimpleVerb());
+        appendToResult(modelService.getInfinitiveVerb());
         appendToResult(modelService.getSimpleNoun());
         return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
     }
@@ -142,7 +142,7 @@ public class PhraseService {
 
     private void appendToResult(ThreeString entity) {
         resultRussian.append(entity.getRussian()).append(" ");
-        resultTranslate.insert(0, entity.getTranslate()).append(" ");
+        resultTranslate.append(entity.getTranslate()).append(" ");
         resultTranscription.append(entity.getTranscription()).append(" ");
     }
 }

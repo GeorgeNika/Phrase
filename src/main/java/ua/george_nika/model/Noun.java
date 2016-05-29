@@ -14,7 +14,9 @@ public class Noun extends AbstractEntity {
 
         addEntity("огурец", "", "");
         addEntity("помидор", "", "");
-        addEntity("море", "", "");
+        addEntity("соль", "מלח", "мелах");
+        addEntity("море", "ים", "ям");
+        addEntity("царь(король)", "מלך", "мелэх");
         addEntity("доска", "", "");
         addEntity("кот", "", "");
         addEntity("собака", "", "");
@@ -22,15 +24,15 @@ public class Noun extends AbstractEntity {
         addEntity("велосипед", "", "");
         addEntity("очки", "", "");
         addEntity("класс", "", "");
-        addEntity("ручка", "", "");
+        addEntity("ручка", "עט", "эт");
         addEntity("тетрадь", "", "");
         addEntity("книга", "", "");
-        addEntity("чай", "", "");
-        addEntity("вода", "", "");
-        addEntity("ночь", "", "");
-        addEntity("вечер", "", "");
+        addEntity("чай", "תה", "тэ");
+        addEntity("вода", "מים", "миам");
+        addEntity("ночь", "לילה", "лайла");
+        addEntity("вечер", "ערב", "эрев");
         addEntity("день", "", "");
-        addEntity("утро", "", "");
+        addEntity("утро", "בוקר", "бокер");
         addEntity("ученик", "", "");
         addEntity("турист", "", "");
         addEntity("рынок", "", "");
@@ -57,6 +59,7 @@ public class Noun extends AbstractEntity {
         addEntity("кефир", "", "");
         addEntity("яблоко", "", "");
         addEntity("груша", "", "");
+        addEntity("сок", "מיץ", "миц");
         addEntity("балкон", "", "");
         addEntity("стол", "", "");
         addEntity("стул", "", "");
@@ -85,11 +88,13 @@ public class Noun extends AbstractEntity {
 
         addEntity("комната", "", "");
         addEntity("квартира", "", "");
-        addEntity("дом", "", "");
+        addEntity("дом", "בית", "байт");
 
         addEntity("клерк", "", "");
         addEntity("деньги", "", "");
 
+        addEntity("мама", "אמא", "има");
+        addEntity("папа", "אבא", "аба");
         addEntity("женщина", "", "");
         addEntity("мужчина", "", "");
         addEntity("брат", "", "");
