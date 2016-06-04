@@ -21,6 +21,9 @@ public class ModelService {
     ActiveVerb activeVerb;
 
     @Autowired
+    MoveVerb moveVerb;
+
+    @Autowired
     Adverbs adverbs;
 
     @Autowired
@@ -33,6 +36,9 @@ public class ModelService {
     Noun noun;
 
     @Autowired
+    Hello hello;
+
+    @Autowired
     OwnPronoun ownPronoun;
 
     @Autowired
@@ -40,6 +46,12 @@ public class ModelService {
 
     @Autowired
     Question question;
+
+    @Autowired
+    Union union;
+
+    @Autowired
+    Geography geography;
 
     @Autowired
     RandomService randomService;
@@ -65,29 +77,34 @@ public class ModelService {
         return activeVerb.getRandomEntity();
     }
 
+    public ThreeString getMoveVerb() {
+
+        return moveVerb.getRandomEntity();
+    }
+
     public ThreeString getAdverbs() {
 
         return adverbs.getRandomEntity();
     }
 
     public ThreeString getSimpleAdjective() {
-
         return adjective.getRandomEntity();
     }
 
     public ThreeString getSimplePronoun() {
-
         return pronoun.getRandomEntity();
     }
 
     public ThreeString getOwnPronoun() {
-
         return ownPronoun.getRandomEntity();
     }
 
     public ThreeString getQuestion() {
-
         return question.getRandomEntity();
+    }
+
+    public ThreeString getHello() {
+        return hello.getRandomEntity();
     }
 
     public ThreeString getHavePronoun() {
@@ -99,5 +116,13 @@ public class ModelService {
         result.setTranslate(existence.getTranslate() + " " + entity.getTranslate());
         result.setTranscription(existence.getTranscription() + entity.getTranscription());
         return result;
+    }
+
+    public ThreeString getUnion() {
+        return union.getRandomEntity();
+    }
+
+    public ThreeString getGeography() {
+        return geography.getRandomEntity();
     }
 }

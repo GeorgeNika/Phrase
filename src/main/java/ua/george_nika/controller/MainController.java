@@ -82,6 +82,27 @@ public class MainController {
         return "main";
     }
 
+    @RequestMapping(value = "/hello")
+    public String hello(ModelMap model) {
+
+        fillModel(model, phraseService.getHello());
+        return "main";
+    }
+
+    @RequestMapping(value = "/union")
+    public String union(ModelMap model) {
+
+        fillModel(model, phraseService.getUnionPhrase());
+        return "main";
+    }
+
+    @RequestMapping(value = "/geography")
+    public String geography(ModelMap model) {
+
+        fillModel(model, phraseService.getGeographyPhrase());
+        return "main";
+    }
+
 
     private void fillModel(ModelMap model, ThreeString entity){
         model.addAttribute("phraseRussian", entity.getRussian());

@@ -26,7 +26,6 @@ public class PhraseService {
 
     public ThreeString getSimplePhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
 
         appendToResult(modelService.getSimplePronoun());
         appendToResult(modelService.getSimpleVerb());
@@ -36,7 +35,6 @@ public class PhraseService {
 
     public ThreeString getInfinitivePhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
 
         appendToResult(modelService.getSimplePronoun());
         appendToResult(randomService.getPositiveOrNegative(modelService.getActiveVerb()));
@@ -47,7 +45,6 @@ public class PhraseService {
 
     public ThreeString getNumberPhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
 
         appendToResult(modelService.getSimplePronoun());
         appendToResult(modelService.getSimpleVerb());
@@ -64,7 +61,6 @@ public class PhraseService {
 
     public ThreeString getAdjectivePhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
 
         appendToResult(modelService.getSimplePronoun());
         appendToResult(modelService.getSimpleVerb());
@@ -75,7 +71,6 @@ public class PhraseService {
 
     public ThreeString getOwnPhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
 
         appendToResult(modelService.getSimpleNoun());
         appendToResult(modelService.getSimpleAdjective());
@@ -85,8 +80,6 @@ public class PhraseService {
 
     public ThreeString getHavePhrase() {
         clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
-
 
         appendToResult(modelService.getHavePronoun());
         appendToResult(modelService.getSimpleNoun());
@@ -95,23 +88,40 @@ public class PhraseService {
     }
 
     public ThreeString getAdverbs() {
-        clearStringBuilder();
-        ThreeString tempEntity = modelService.getAdverbs();
-
-        appendToResult(tempEntity);
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        return modelService.getAdverbs();
     }
 
     public ThreeString getQuestion() {
-        clearStringBuilder();
-        ThreeString tempEntity = modelService.getQuestion();
+        return modelService.getQuestion();
+    }
 
-        appendToResult(tempEntity);
+    public ThreeString getHello() {
+        return modelService.getHello();
+    }
+
+    public ThreeString getUnionPhrase() {
+        clearStringBuilder();
+
+        appendToResult(modelService.getSimplePronoun());
+        appendToResult(modelService.getSimpleVerb());
+        appendToResult(randomService.getPositiveOrNegative(modelService.getSimpleNoun()));
+        appendToResult(modelService.getUnion());
+        appendToResult(modelService.getSimpleVerb());
+        appendToResult(modelService.getSimpleNoun());
+        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+    }
+
+    public ThreeString getGeographyPhrase() {
+        clearStringBuilder();
+
+        appendToResult(modelService.getSimplePronoun());
+        appendToResult(randomService.getPositiveOrNegative(modelService.getMoveVerb()));
+        appendToResult(modelService.getGeography());
         return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
     }
 
     public ThreeString getRandomPhrase() {
-        switch (randomService.getRandomInt(7) + 1) {
+        switch (randomService.getRandomInt(10) + 1) {
             case 1:
                 return getSimplePhrase();
             case 2:
@@ -128,6 +138,12 @@ public class PhraseService {
                 return getQuestion();
             case 8:
                 return getAdverbs();
+            case 9:
+                return getHello();
+            case 10:
+                return getUnionPhrase();
+            case 11:
+                return getGeographyPhrase();
 
             default:
                 return getSimplePhrase();

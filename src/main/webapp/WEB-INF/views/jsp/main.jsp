@@ -39,6 +39,12 @@
 <a href="question">Вопросы</a>
 <br/>
 <a href="adverb">Наречия</a>
+<br/>
+<a href="hello">Приветствия</a>
+<br/>
+<a href="union">Союзы</a>
+<br/>
+<a href="geography">География</a>
 
 </body>
 </html>
