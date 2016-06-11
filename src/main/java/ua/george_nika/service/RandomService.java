@@ -23,10 +23,7 @@ public class RandomService {
 
     public ThreeString getPositiveOrNegative(ThreeString str){
         if (Math.random()>0.75){
-            str.setRussian(" не "+str.getRussian());
-            str.setTranslate(" לא " + str.getTranslate());
-            str.setTranscription(" лё "+str.getTranscription());
-            return str;
+            return new ThreeString(" не "+str.getRussian()," לא " + str.getTranslate(), " лё "+str.getTranscription());
         }
         return str;
     }
@@ -37,7 +34,4 @@ public class RandomService {
         }
         return new ThreeString("есть ","יש ","еш ");
     }
-
-
-
 }

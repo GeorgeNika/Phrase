@@ -10,16 +10,16 @@ public class OwnPronoun extends AbstractEntity{
 
     OwnPronoun(){
 
-        addEntity("Мой(моя)","","");
-        addEntity("Твой(твоя) (м)","","");
-        addEntity("Твой(твоя) (ж)","","");
-        addEntity("Его","","");
-        addEntity("Её","","");
-        addEntity("Наше","","");
-        addEntity("Ваше (м)","","");
-        addEntity("Ваше (ж)","","");
-        addEntity("Их (м)","","");
-        addEntity("Их (ж)","","");
+        addEntity("Мой(моя)","שלי","шели");
+        addEntity("Твой(твоя) (м)","שלך","шельха");
+        addEntity("Твой(твоя) (ж)","שלך","шалах");
+        addEntity("Его","שלו","шело");
+        addEntity("Её","שלה","шела");
+        addEntity("Наше","שלנו","шелану");
+        addEntity("Ваше (м)","שלכם","шелахем");
+        addEntity("Ваше (ж)","שלכן","шелахен");
+        addEntity("Их (м)","שלהם","шелахем");
+        addEntity("Их (ж)","שלהן","шелахен");
 
     }
 

@@ -17,34 +17,67 @@
 <button onclick="$('#translate').show()">Перевод</button>
 <h1 id="translate" hidden>${phraseTranslate}</h1>
 <br/>
+<br/>
+<br/>
 <button onclick="$('#transcription').show()">Транскрипция</button>
 <h1 id="transcription" hidden>${phraseTranscription}</h1>
 <br/>
 <br/>
 <br/>
-<a href="random">Случайная Фраза</a>
-<br/>
-<a href="simple">Простая фраза</a>
-<br/>
-<a href="infinitive">Фраза с инфинитивом</a>
-<br/>
-<a href="number">Фраза с числом</a>
-<br/>
-<a href="adjective">Фраза с прилагательным</a>
-<br/>
-<a href="own">Моё</a>
-<br/>
-<a href="have">У меня есть</a>
-<br/>
-<a href="question">Вопросы</a>
-<br/>
-<a href="adverb">Наречия</a>
-<br/>
-<a href="hello">Приветствия</a>
-<br/>
-<a href="union">Союзы</a>
-<br/>
-<a href="geography">География</a>
+<table>
+    <tr style="width: 800px; height: 60px;">
+        <td style="width: 400px;">
+            <a href="random"><h3>Случайная Фраза</h3></a>
+        </td>
+        <td style="width: 400px;">
+            <a href="simple"><h3>Простая фраза</h3></a>
+        </td>
+    </tr>
 
+
+    <tr style="height: 60px;">
+        <td>
+            <a href="infinitive"><h3>Фраза с инфинитивом</h3></a>
+        </td>
+        <td>
+            <a href="number"><h3>Фраза с числом</h3></a>
+        </td>
+    </tr>
+
+    <tr style="height: 60px;">
+        <td>
+            <a href="adjective"><h3>Фраза с прилагательным</h3></a>
+        </td>
+        <td>
+            <a href="own"><h3>Моё</h3></a>
+        </td>
+    </tr>
+
+
+    <tr style="height: 60px;">
+        <td>
+            <a href="have"><h3>У меня есть</h3></a>
+        </td>
+        <td>
+            <a href="question"><h3>Вопросы</h3></a>
+        </td>
+    </tr>
+    <tr style="height: 60px;">
+        <td>
+            <a href="adverb"><h3>Наречия</h3></a>
+        </td>
+        <td>
+            <a href="hello"><h3>Приветствия</h3></a>
+        </td>
+    </tr>
+    <tr style="height: 60px;">
+        <td style="width: 50%;">
+            <a href="union"><h3>Союзы</h3></a>
+        </td>
+        <td style="width: 50%;">
+            <a href="geography"><h3>География</h3></a>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

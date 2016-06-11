@@ -10,7 +10,7 @@ public class HavePronoun extends AbstractEntity{
 
     HavePronoun(){
 
-        addEntity("Меня)","לי","ли");
+        addEntity("Меня","לי","ли");
         addEntity("Тебя (м)","לך","льха");
         addEntity("Тебя (ж)","לך","лах");
         addEntity("Него","לו","ло");

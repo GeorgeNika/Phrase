@@ -43,6 +43,8 @@ public class SimpleVerb extends AbstractEntity{
         addEntity("кушаю","אוכל","охель");
         addEntity("пью","שותה","шотэ");
         addEntity("сплю","ישן","яшен");
+        addEntity("нахожусь","ישן","нимца");
+        addEntity("вижу","רואה","роэ");
 
 
 

@@ -111,10 +111,9 @@ public class ModelService {
 
         ThreeString existence = randomService.getRandomExistence();
         ThreeString entity = havePronoun.getRandomEntity();
-        ThreeString result = new ThreeString();
-        result.setRussian("У " + entity.getRussian() + " " + existence.getRussian());
-        result.setTranslate(existence.getTranslate() + " " + entity.getTranslate());
-        result.setTranscription(existence.getTranscription() + entity.getTranscription());
+        ThreeString result = new ThreeString("У " + entity.getRussian() + " " + existence.getRussian(),
+                existence.getTranslate() + " " + entity.getTranslate(),
+                existence.getTranscription() + entity.getTranscription());
         return result;
     }
 

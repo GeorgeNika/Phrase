@@ -5,41 +5,50 @@ package ua.george_nika.model;
  */
 public class ThreeString {
 
-    protected String russian;
-    protected String translate;
-    protected String transcription;
+    protected StringBuilder russian;
+    protected StringBuilder translate;
+    protected StringBuilder transcription;
 
     public ThreeString() {
+        russian = new StringBuilder();
+        translate = new StringBuilder();
+        transcription = new StringBuilder();
+    }
+
+    public ThreeString(ThreeString threeString) {
+        this.russian = new StringBuilder(threeString.getRussian());
+        this.translate = new StringBuilder(threeString.getTranslate());
+        this.transcription = new StringBuilder(threeString.getTranscription());
     }
 
     public ThreeString(String russian, String translate, String transcription) {
-        this.russian = russian;
-        this.translate = translate;
-        this.transcription = transcription;
+        this.russian = new StringBuilder(russian);
+        this.translate = new StringBuilder(translate);
+        this.transcription = new StringBuilder(transcription);
+    }
+
+    public void append(ThreeString threeString) {
+        russian.append(" ").append(threeString.getRussian());
+        translate.append(" ").append(threeString.getTranslate());
+        transcription.append(" ").append(threeString.getTranscription());
+    }
+
+    public void append(String russian, String translate, String transcription) {
+        this.russian.append(" ").append(russian);
+        this.translate.append(" ").append(translate);
+        this.transcription.append(" ").append(transcription);
     }
 
     public String getRussian() {
-        return russian;
-    }
-
-    public void setRussian(String russian) {
-        this.russian = russian;
+        return russian.toString();
     }
 
     public String getTranslate() {
-        return translate;
-    }
-
-    public void setTranslate(String translate) {
-        this.translate = translate;
+        return translate.toString();
     }
 
     public String getTranscription() {
-        return transcription;
-    }
-
-    public void setTranscription(String transcription) {
-        this.transcription = transcription;
+        return transcription.toString();
     }
 }
 

@@ -9,14 +9,8 @@ import ua.george_nika.model.ThreeString;
  * Created by user on 16.05.16.
  */
 
-// not Thread Safe
 @Service
 public class PhraseService {
-
-    protected StringBuilder resultRussian = new StringBuilder();
-    protected StringBuilder resultTranslate = new StringBuilder();
-    protected StringBuilder resultTranscription = new StringBuilder();
-
 
     @Autowired
     ModelService modelService;
@@ -25,66 +19,54 @@ public class PhraseService {
     RandomService randomService;
 
     public ThreeString getSimplePhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(modelService.getSimpleVerb());
-        appendToResult(randomService.getPositiveOrNegative(modelService.getSimpleNoun()));
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getSimplePronoun());
+        result.append(randomService.getPositiveOrNegative(modelService.getSimpleVerb()));
+        result.append(randomService.getPositiveOrNegative(modelService.getSimpleNoun()));
+        return result;
     }
 
     public ThreeString getInfinitivePhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(randomService.getPositiveOrNegative(modelService.getActiveVerb()));
-        appendToResult(modelService.getInfinitiveVerb());
-        appendToResult(modelService.getSimpleNoun());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getSimplePronoun());
+        result.append(randomService.getPositiveOrNegative(modelService.getActiveVerb()));
+        result.append(modelService.getInfinitiveVerb());
+        result.append(modelService.getSimpleNoun());
+        return result;
     }
 
     public ThreeString getNumberPhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(modelService.getSimpleVerb());
+        ThreeString result = new ThreeString(modelService.getSimplePronoun());
+        result.append(modelService.getSimpleVerb());
         int randomInt = randomService.getRandomInt(100);
         if (randomInt == 1) {
-            appendToResult(modelService.getSimpleNoun());
-            appendToResult(new ThreeString(" 1", " 1", " 1"));
+            result.append(modelService.getSimpleNoun());
+            result.append(" 1", " 1", " 1");
         } else {
-            appendToResult(new ThreeString(" "+randomInt," "+randomInt," "+randomInt));
-            appendToResult(modelService.getSimpleNoun());
+            result.append(" " + randomInt, " " + randomInt, " " + randomInt);
+            result.append(modelService.getSimpleNoun());
         }
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        return result;
     }
 
     public ThreeString getAdjectivePhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(modelService.getSimpleVerb());
-        appendToResult(modelService.getSimpleNoun());
-        appendToResult(modelService.getSimpleAdjective());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getSimplePronoun());
+        result.append(modelService.getSimpleVerb());
+        result.append(modelService.getSimpleNoun());
+        result.append(modelService.getSimpleAdjective());
+        return result;
     }
 
     public ThreeString getOwnPhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimpleNoun());
-        appendToResult(modelService.getSimpleAdjective());
-        appendToResult(modelService.getOwnPronoun());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getSimpleNoun());
+        result.append(modelService.getSimpleAdjective());
+        result.append(modelService.getOwnPronoun());
+        return result;
     }
 
     public ThreeString getHavePhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getHavePronoun());
-        appendToResult(modelService.getSimpleNoun());
-        appendToResult(modelService.getSimpleAdjective());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getHavePronoun());
+        result.append(modelService.getSimpleNoun());
+        result.append(modelService.getSimpleAdjective());
+        return result;
     }
 
     public ThreeString getAdverbs() {
@@ -100,24 +82,18 @@ public class PhraseService {
     }
 
     public ThreeString getUnionPhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(modelService.getSimpleVerb());
-        appendToResult(randomService.getPositiveOrNegative(modelService.getSimpleNoun()));
-        appendToResult(modelService.getUnion());
-        appendToResult(modelService.getSimpleVerb());
-        appendToResult(modelService.getSimpleNoun());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(getSimplePhrase());
+        result.append(modelService.getUnion());
+        result.append(modelService.getSimpleVerb());
+        result.append(modelService.getSimpleNoun());
+        return result;
     }
 
     public ThreeString getGeographyPhrase() {
-        clearStringBuilder();
-
-        appendToResult(modelService.getSimplePronoun());
-        appendToResult(randomService.getPositiveOrNegative(modelService.getMoveVerb()));
-        appendToResult(modelService.getGeography());
-        return new ThreeString(resultRussian.toString(), resultTranslate.toString(), resultTranscription.toString());
+        ThreeString result = new ThreeString(modelService.getSimplePronoun());
+        result.append(randomService.getPositiveOrNegative(modelService.getMoveVerb()));
+        result.append(modelService.getGeography());
+        return result;
     }
 
     public ThreeString getRandomPhrase() {
@@ -148,17 +124,5 @@ public class PhraseService {
             default:
                 return getSimplePhrase();
         }
-    }
-
-    private void clearStringBuilder() {
-        resultRussian = new StringBuilder();
-        resultTranslate = new StringBuilder();
-        resultTranscription = new StringBuilder();
-    }
-
-    private void appendToResult(ThreeString entity) {
-        resultRussian.append(entity.getRussian()).append(" ");
-        resultTranslate.append(entity.getTranslate()).append(" ");
-        resultTranscription.append(entity.getTranscription()).append(" ");
     }
 }

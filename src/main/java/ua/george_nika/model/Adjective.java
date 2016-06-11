@@ -15,7 +15,7 @@ public class Adjective extends AbstractEntity {
         addEntity("хороший", "טוב", "тов");
         addEntity("новый", "חדש", "хадаш");
         addEntity("большой", "גדול", "гадоль");
-        addEntity("маленький", "קטן", "ктан");
+        addEntity("маленький", "קטן", "катан");
         addEntity("больной", "חולה", "холе");
         addEntity("красивый", "יפה", "яфе");
         addEntity("интересный", "מעניין", "меаньен");
@@ -34,6 +34,7 @@ public class Adjective extends AbstractEntity {
         addEntity("веселый", "שמח", "самех");
 
         addEntity("еврейский", "עברי", "иври");
+        addEntity("тёжелый", "קשה", "каше");
 
     }
 

@@ -38,9 +38,8 @@ public class InfinitiveVerb extends AbstractEntity{
         addEntity("кушать","לאכול","леэхоль");
         addEntity("пить","לשתות","лиштот");
         addEntity("спать","לישון","лишон");
-
-
-
+        addEntity("находиться","להימצא","лехимаце");
+        addEntity("видеть","לראות","лирот");
 
     }
 
