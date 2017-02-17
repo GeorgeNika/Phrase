@@ -3,7 +3,7 @@ package ua.george_nika.model;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by george on 16.05.2016.
+ *
  */
 @Component
 public class InfinitiveVerb extends AbstractEntity{
@@ -21,7 +21,6 @@ public class InfinitiveVerb extends AbstractEntity{
         addEntity("разговаривать","לדבר","ледабер");
         addEntity("писать","לכתוב","лихтов");
         addEntity("ехать","לנסוע","линсоа");
-        addEntity("знать","לדעת","ладаат");
         addEntity("уметь","לדעת","ладаат");
         addEntity("спрашивать","לשאול","лишоль");
         addEntity("читать","לקרוא","ликро");
@@ -40,6 +39,24 @@ public class InfinitiveVerb extends AbstractEntity{
         addEntity("спать","לישון","лишон");
         addEntity("находиться","להימצא","лехимаце");
         addEntity("видеть","לראות","лирот");
+
+        addEntity("понимать","להבין","лехавин");
+        addEntity("сидеть","לשבת","лашевет");
+        addEntity("посылать","לשלוח","лишлоах");
+        addEntity("входить","להיכנס","лехиканес");
+        addEntity("выходить","לצאת","лацет");
+        addEntity("встречаться","להפגש","леипогеш");
+        addEntity("рассказвать","לספר","лесапер");
+        addEntity("заканчивать","לסיים","лесаем");
+        addEntity("навещать","לבקר","левакер");
+        addEntity("знать","להכיר","леакир");
+        addEntity("подавать","להגיש","леагишь");
+        addEntity("варить еду","לבשל","левашель");
+        addEntity("мыться","להתרחץ","лехитрахец");
+        addEntity("играть","לשחק","лесахек");
+        addEntity("поворачиваться","לפנות","лифнот");
+
+
 
     }
 
