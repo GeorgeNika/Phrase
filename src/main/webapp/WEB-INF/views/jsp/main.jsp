@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Phrase 2017 v2</title>
+    <title>Phrase 2017 v2.5</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
