@@ -21,7 +21,6 @@ public class SimpleVerb extends AbstractEntity{
         addEntity("делаю","עושה","йоде");
         addEntity("хочу","רוצה","роце");
         addEntity("нуждаюсь","צריך","царих");
-        addEntity("должен","צריך","царих");
         addEntity("разговариваю","מדבר","медабер");
         addEntity("пишу","כותב","котев");
         addEntity("еду","נוסע","носе");
@@ -51,6 +50,7 @@ public class SimpleVerb extends AbstractEntity{
         addEntity("посылаю","שולח","шолеах");
         addEntity("вхожу","נכנס","нихнас");
         addEntity("выхожу","יוצא","йоце");
+
         addEntity("встречаюсь","נפגש","нипгаш");
         addEntity("рассказываю","מספר","месапер");
         addEntity("заканчиваю","מסיים","месаем");

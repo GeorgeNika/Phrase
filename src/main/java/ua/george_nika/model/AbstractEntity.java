@@ -1,5 +1,6 @@
 package ua.george_nika.model;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
