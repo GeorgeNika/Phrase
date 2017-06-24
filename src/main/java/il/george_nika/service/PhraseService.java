@@ -24,6 +24,9 @@ public class PhraseService {
     @Autowired
     VerbService verbService;
 
+    @Autowired
+    DataService dataService;
+
 
     public Phrase getPresentPhrase() {
         Pronoun firstPronoun = pronounService.getPronoun();
@@ -42,6 +45,7 @@ public class PhraseService {
 
         Phrase result = new Phrase();
         result.setLanguageUnit(getSummarizedLanguageUnit(summarizedPhrase));
+        result.getLanguageUnit().getRussian().concat(dataService.getDataInfo());
         return result;
     }
 
