@@ -45,7 +45,7 @@ public class PhraseService {
 
         Phrase result = new Phrase();
         result.setLanguageUnit(getSummarizedLanguageUnit(summarizedPhrase));
-        result.getLanguageUnit().getRussian().concat(dataService.getDataInfo());
+        result.getLanguageUnit().setRussian(dataService.getDataInfo());
         return result;
     }
 
